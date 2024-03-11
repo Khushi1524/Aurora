@@ -5,36 +5,196 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <title>Aurora</title>
 </head>
 
 <body>
-    <header class="header" >
+    <header class="header">
         <a href="#" class="logo">Aurora</a>
 
-        <nav class="navbar" >
+        <nav class="navbar">
             <a href="#home">Home</a>
             <a href="#gallery">Gallery</a>
             <a href="#destination">Destination</a>
             <a href="#forum">Forum</a>
-            <a href="#signup">Signup</a>
+            <button><a href="#signup">Signup</a></button>
         </nav>
 
     </header>
 
     <section id="home">
-        <video autoplay loop muted plays-inline class="aurora">
-            <source src="./assets/home.mp4" type="video/mp4">
-        </video>
         <div class="container">
-            <h2>BEAUTIFUL NORTHERRN LIGHTS</h2>
-            <h3>Lorem ipsum dolor sit amet consectetur.</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo, architecto doloremque facilis
-                dolorem quidem perferendis.</p>
-            <button>READ MORE</button>
-
+            <div class="bg">
+                <video autoplay loop muted plays-inline class="aurora">
+                    <source src="./assets/home.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div data-aos="fade-up" class="content">
+                <h2>BEAUTIFUL NORTHERRN LIGHTS</h2>
+                <h3>Lorem ipsum dolor sit amet consectetur</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo, architecto doloremque facilis
+                    dolorem quidem perferendis.</p>
+                <button>READ MORE</button>
+            </div>
         </div>
     </section>
+
+    <section id="gallery">
+        <div class="imgBx">
+            <img data-aos="fade-up" src="https://i.pinimg.com/564x/59/30/ae/5930aea2fac65d165c2024e0b43eeb9b.jpg"
+                alt="">
+            <img data-aos="fade-up" src="https://i.pinimg.com/564x/f5/5d/dd/f55dddccd2a682ab31b4f3e0bf679fcd.jpg"
+                alt="">
+            <img data-aos="fade-up" src="https://i.pinimg.com/564x/95/ab/68/95ab68cf2a7cdf93848de43f8a20b750.jpg"
+                alt="">
+        </div>
+    </section>
+
+    <section id="galleryy">
+        <div data-aos="fade-up" class="content">
+            <h2>PHOTO GALLERY</h2>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nisi nihil libero sint!</p>
+        </div>
+
+        <div class="allimg">
+
+            <div data-aos="fade-up" class="imgbx">
+                <div class="imgs">
+                    <img src="https://i.pinimg.com/564x/c2/f3/c0/c2f3c060c0d5109ed1b35e2b93ebc736.jpg" alt="">
+                </div>
+                <div class="contentbx">
+                    <a href="">
+                        <h3>COUNTRIES</h3>
+                    </a>
+                    <button>VIEW MORE</button>
+                </div>
+            </div>
+
+            <div data-aos="fade-up" class="imgbx">
+                <div class="imgs">
+                    <img src="https://i.pinimg.com/564x/d9/5a/8a/d95a8ababd0b98850d97e50bb38815de.jpg" alt="">
+                </div>
+                <div class="contentbx">
+                    <a href="">
+                        <h3>THEMES</h3>
+                    </a>
+                    <button>VIEW MORE</button>
+                </div>
+            </div>
+
+            <div data-aos="fade-up" class="imgbx">
+                <div class="imgs">
+                    <img src="https://i.pinimg.com/736x/31/48/5a/31485a718a0cde62c529e30487befdc3.jpg" alt="">
+                </div>
+                <div class="contentbx">
+                    <a href="">
+                        <h3>AI IMAGES</h3>
+                    </a>
+                    <button>VIEW MORE</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="destination">
+        <h2>5 BEST PLACES TO SEE THE NORTHERN LIGHTS</h2>
+    </section>
+
+    <section id="destinationn">
+        <!-- <p>From the U.S. to Scandinavia, these are the best places to see the northern lights.</p> -->
+        <div class="places">
+            <h2>1.Fairbanks, Alaska</h2>
+            <img src="https://www.travelandleisure.com/thmb/qY9UFueEJelAAecTA3X2E224N9Y=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/fairbanks-alaska-23bc91e78bb8441b943381178798b109.jpg"
+                alt="">
+            <p>The bitter cold that often comes with chasing the aurora can be a real deterrent, but what if you could
+                see the lights while soaking in a natural hot tub? Enter Fairbanks' Chena Hot Springs Resort, whose
+                boulder-enclosed lake offers the opportunity to enjoy a warm soak along with the light show. Fairbanks
+                lies directly beneath a band of auroral activity, meaning from August to the end of April the town
+                regularly experiences a celestial display of green, yellow, and purple.
+
+                The phenomenon is most frequently seen between 11 p.m. and 2 a.m., but the early-to-bed crowd need not
+                worry. Chena Hot Springs Resort guests can request a wake-up call when the aurora is spotted in the sky.
+            </p>
+        </div>
+
+
+        <div class="places">
+            <h2>2.Norway</h2>
+            <img src="https://www.travelandleisure.com/thmb/Bfy8O1qyEnN1sJmy5kFX2FJ-Ywc=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/svalbard-norway-northern-lights-NLIGHTS119-8f24b843e23b4f31859162bc150c46db.jpg"
+                alt="">
+            <p>Norway has no shortage of prime vantage points. First and foremost is Svalbard, a string of Arctic
+                islands midway between continental Norway and the North Pole. Because the archipelago experiences polar
+                night, or perpetual darkness, between mid-November and February, it offers visitors double the
+                opportunity to see the lights and is the only inhabited place in the world where you can experience the
+                phenomenon during the day. Join a three-hour snowcat safari or brave the cold on a snowmobile tour
+                complete with a stop for warm drinks and biscuits.
+
+                Tromsø is northern Norway's largest city and is situated in the middle of the auroral oval. The city
+                offers visitors a wide variety of tours to choose from during its dark season from late September
+                through late March. One fun way to see the auroral display is to ride a cable car up Mount Storsteinen,
+                which provides one of the best views of the northern lights in the city. Or, if you prefer to experience
+                the magic while sipping Akvavit, slide into a table at the Skybar at Clarion Hotel The Edge.
+            </p>
+        </div>
+
+
+
+        <div class="places">
+            <h2>Fairbanks, Alaska</h2>
+            <img src="https://www.travelandleisure.com/thmb/qY9UFueEJelAAecTA3X2E224N9Y=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/fairbanks-alaska-23bc91e78bb8441b943381178798b109.jpg"
+                alt="">
+            <p>The bitter cold that often comes with chasing the aurora can be a real deterrent, but what if you could
+                see the lights while soaking in a natural hot tub? Enter Fairbanks' Chena Hot Springs Resort, whose
+                boulder-enclosed lake offers the opportunity to enjoy a warm soak along with the light show. Fairbanks
+                lies directly beneath a band of auroral activity, meaning from August to the end of April the town
+                regularly experiences a celestial display of green, yellow, and purple.
+
+                The phenomenon is most frequently seen between 11 p.m. and 2 a.m., but the early-to-bed crowd need not
+                worry. Chena Hot Springs Resort guests can request a wake-up call when the aurora is spotted in the sky.
+            </p>
+        </div>
+
+
+        <div class="places">
+            <h2>Fairbanks, Alaska</h2>
+            <img src="https://www.travelandleisure.com/thmb/qY9UFueEJelAAecTA3X2E224N9Y=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/fairbanks-alaska-23bc91e78bb8441b943381178798b109.jpg"
+                alt="">
+            <p>The bitter cold that often comes with chasing the aurora can be a real deterrent, but what if you could
+                see the lights while soaking in a natural hot tub? Enter Fairbanks' Chena Hot Springs Resort, whose
+                boulder-enclosed lake offers the opportunity to enjoy a warm soak along with the light show. Fairbanks
+                lies directly beneath a band of auroral activity, meaning from August to the end of April the town
+                regularly experiences a celestial display of green, yellow, and purple.
+
+                The phenomenon is most frequently seen between 11 p.m. and 2 a.m., but the early-to-bed crowd need not
+                worry. Chena Hot Springs Resort guests can request a wake-up call when the aurora is spotted in the sky.
+            </p>
+        </div>
+
+
+        <div class="places">
+            <h2>Fairbanks, Alaska</h2>
+            <img src="https://www.travelandleisure.com/thmb/qY9UFueEJelAAecTA3X2E224N9Y=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/fairbanks-alaska-23bc91e78bb8441b943381178798b109.jpg"
+                alt="">
+            <p>The bitter cold that often comes with chasing the aurora can be a real deterrent, but what if you could
+                see the lights while soaking in a natural hot tub? Enter Fairbanks' Chena Hot Springs Resort, whose
+                boulder-enclosed lake offers the opportunity to enjoy a warm soak along with the light show. Fairbanks
+                lies directly beneath a band of auroral activity, meaning from August to the end of April the town
+                regularly experiences a celestial display of green, yellow, and purple.
+
+                The phenomenon is most frequently seen between 11 p.m. and 2 a.m., but the early-to-bed crowd need not
+                worry. Chena Hot Springs Resort guests can request a wake-up call when the aurora is spotted in the sky.
+            </p>
+        </div>
+
+    </section>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 2000,
+        });
+    </script>
 
 </body>
 
