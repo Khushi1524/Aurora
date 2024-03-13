@@ -118,7 +118,7 @@
 #home .container .content button {
     padding: 18px 10px;
     border-radius: 15px;
-    font-size: 20px;
+    font-size: 18px;
     color: #fff;
     margin-top: 10px;
     font-weight: 700px;
@@ -127,8 +127,9 @@
 }
 
 #home .container .content button:hover {
-    background: rgb(53, 216, 132);
-    box-shadow: 0 14px 18px 0 rgba(51, 206, 170, 0.2), 0 16px 20px 0 rgba(44, 208, 148, 0.19);
+    background: rgb(91, 217, 108);
+    background: linear-gradient(90deg, rgba(91, 217, 108, 1) 32%, rgba(115, 207, 226, 1) 100%);
+    box-shadow: 0 2px 24px 0 rgb(203, 75, 207), 0 6px 16px 0 rgb(213, 75, 223);
 }
 
 /* gallery */
@@ -152,6 +153,10 @@
     width: 60vh;
     height: 60vh;
     border-radius: 20%;
+}
+
+#gallery .imgBx img:hover{
+    box-shadow: 0 2px 24px 0 rgba(203, 75, 207, 0.229), 0 6px 16px 0 rgba(213, 75, 223, 0.234);
 }
 
 /* gallery2 */
@@ -227,11 +232,21 @@
 }
 
 #galleryy .allimg .contentbx button {
-    padding: 12px 10px;
-    font-size: 16px;
+    padding: 16px 10px;
+    width: 150px;
+    font-size: 15px;
     color: #fff;
     background: black;
     border-radius: 8px;
+}
+
+#galleryy .allimg .contentbx button:hover {
+    color: black;
+    font-weight: 600;
+    font-size: 16px;
+    background: rgb(91, 217, 108);
+    background: linear-gradient(90deg, rgba(91, 217, 108, 1) 32%, rgba(115, 207, 226, 1) 100%);
+    box-shadow: 0 2px 24px 0 rgb(203, 75, 207), 0 6px 16px 0 rgb(213, 75, 223);
 }
 
 /* destination */
