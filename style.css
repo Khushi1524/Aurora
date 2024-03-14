@@ -45,6 +45,13 @@
     background: transparent;
 }
 
+.header .navbar button:hover {
+    background: rgb(91, 217, 108);
+    background: linear-gradient(90deg, rgba(91, 217, 108, 1) 32%, rgba(115, 207, 226, 1) 100%);
+    box-shadow: 0 2px 24px 0 rgb(203, 75, 207), 0 6px 16px 0 rgb(213, 75, 223);
+    
+}
+
 .header .navbar a::before {
     content: '';
     position: absolute;
@@ -130,6 +137,26 @@
     background: rgb(91, 217, 108);
     background: linear-gradient(90deg, rgba(91, 217, 108, 1) 32%, rgba(115, 207, 226, 1) 100%);
     box-shadow: 0 2px 24px 0 rgb(203, 75, 207), 0 6px 16px 0 rgb(213, 75, 223);
+}
+
+/* signup */
+#signup{
+    position: relative;
+    min-height: 60vh;
+    padding: 80px 100px;
+}
+
+#signup .container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#signup .container .content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 /* gallery */
