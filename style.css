@@ -362,19 +362,28 @@
 
 /* forum */
 
-/* #forum{
+ 
+#forum{
     position: relative;
-    min-height: 100vh;
+    min-height: 60vh;
     padding: 80px 100px;
-    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTy-2JZ3DIUsOsrvQeaCsqGlDfc5BOa3HpWXw&usqp=CAU');
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTy-2JZ3DIUsOsrvQeaCsqGlDfc5BOa3HpWXw&usqp=CAU');  
 }
 
-#forum .content{
+#forum .newimg {
     display: flex;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
+    gap: 25px;
 }
 
-#forum .head h2{
-    color: #fff;
-} */
+#forum .newimg img {
+    width: 60vh;
+    height: 10vh;
+    border-radius: 20%;
+}
+
+#forum .newimg img:hover{
+    box-shadow: 0 2px 24px 0 rgba(203, 75, 207, 0.229), 0 6px 16px 0 rgba(213, 75, 223, 0.234);
+} 

@@ -1,3 +1,7 @@
+<?php
+$_SESSION['name'] = "Admin";
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -16,11 +20,11 @@
             outline: none;
         }
 
-        body {
+        /* body {
             background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTy-2JZ3DIUsOsrvQeaCsqGlDfc5BOa3HpWXw&usqp=CAU');
-        }
+        } */
 
-        ::-webkit-scrollbar{
+        ::-webkit-scrollbar {
             display: none;
         }
 
@@ -51,7 +55,7 @@
             margin-bottom: 20px;
         }
 
-        .container .content button{
+        .container .content button {
             padding: 8px 10px;
             font-size: 22px;
             font-weight: 550;
@@ -59,12 +63,12 @@
             margin-bottom: 25px;
         }
 
-        .container .content button:hover{
+        .container .content button:hover {
             background: rgb(55, 220, 151);
             color: #fff;
         }
 
-        .container .imgs{
+        .container .imgs {
             display: flex;
             flex-direction: row;
             flex-wrap: wrap;
@@ -72,7 +76,7 @@
             gap: 30px;
         }
 
-        .container .imgs img{
+        .container .imgs img {
             width: 350px;
             height: 60vh;
             border-radius: 20%;
@@ -84,15 +88,29 @@
     <div class="container">
         <div data-aos="fade-up" class="content">
             <h2>COUNTRIES</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam, unde?Lorem ipsum dolor sit amet
-                consectetur adipisicing elit Quidem, enim?</p>
-            <button>Upload Image</button>
+
+
+            <?php
+            if (isset($_SESSION['name'])) {
+                echo '<div class="form">
+                <form action="gallery_upload.php" method="post" enctype="multipart/form-data">
+                    <input type="text" name="filename" placeholder="file name">
+                    <input type="text" name="filetitle" placeholder="Image title">
+                    <input type="text" name="filedesc" placeholder="Image description here">
+                    <input type="file" name="file">
+                    <button type="submit" name="submit">Upload</button>
+                </form>
+            </div>';
+            }
+
+            ?>
+
         </div>
 
         <div data-aos="fade-up" class="imgs">
             <img src="https://i.pinimg.com/564x/da/93/86/da93863d2afda12940a702bc6b0820d2.jpg" alt="">
             <img src="https://i.pinimg.com/564x/da/93/86/da93863d2afda12940a702bc6b0820d2.jpg" alt="">
-            <img src="https://i.pinimg.com/564x/da/93/86/da93863d2afda12940a702bc6b0820d2.jpg" alt="">
+           
         </div>
     </div>
 
