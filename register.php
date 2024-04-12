@@ -8,7 +8,7 @@ $contact = $_POST['contact'];
 $db_servername = "localhost";
 $db_username = "root"; // 
 $db_password = ""; 
-$db_dbname = "aurorasignup";
+$db_dbname = "aurora";
 $db_port = "3307";
 
 $conn = new mysqli($db_servername, $db_username, $db_password, $db_dbname, $db_port);
