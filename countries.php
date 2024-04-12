@@ -1,5 +1,19 @@
 <?php
-$_SESSION['name'] = "Admin";
+   include('connect.php');
+   if (isset($_POST['submit'])) {
+     $file_name = $_FILES['image']['name'];
+     $tempname =$_FILES['image']['tmp_name'];
+     $folder = 'images/'.$file_name;
+
+
+     $query = mysqli_query($conn, "Insert into images (file) values ('$file_name')");
+
+     if (move_uploaded_file($tempname, $folder)) {
+        echo "<h2>File uploaded successfully</h2>";
+     }else {
+        echo "<h2>File not uploaded successfully</h2>";
+     }
+   }
 ?>
 
 <!DOCTYPE html>
@@ -89,27 +103,26 @@ $_SESSION['name'] = "Admin";
         <div data-aos="fade-up" class="content">
             <h2>COUNTRIES</h2>
 
+            <form action="" method="post" enctype="multipart/form-data" >
+                <input type="file" name="image" id="">
+                <button type="submit" name="submit" >Submit</button>
+            </form>
 
-            <?php
-            if (isset($_SESSION['name'])) {
-                echo '<div class="form">
-                <form action="gallery_upload.php" method="post" enctype="multipart/form-data">
-                    <input type="text" name="filename" placeholder="file name">
-                    <input type="text" name="filetitle" placeholder="Image title">
-                    <input type="text" name="filedesc" placeholder="Image description here">
-                    <input type="file" name="file">
-                    <button type="submit" name="submit">Upload</button>
-                </form>
-            </div>';
-            }
-
-            ?>
+            
+        
 
         </div>
 
-        <div data-aos="fade-up" class="imgs">
-            <img src="https://i.pinimg.com/564x/da/93/86/da93863d2afda12940a702bc6b0820d2.jpg" alt="">
-            <img src="https://i.pinimg.com/564x/da/93/86/da93863d2afda12940a702bc6b0820d2.jpg" alt="">
+        <div  class="imgs">
+            <?php 
+
+            $res = mysqli_query($conn, "select * from images");
+            while($row = mysqli_fetch_assoc($res)){
+
+            ?>
+            <img src="images/<?php echo $row['file']  ?>" />
+             
+            <?php }?>
            
         </div>
     </div>
