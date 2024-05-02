@@ -68,10 +68,14 @@
         }
 
         .blogs {
-            padding: 50px 190px;
+            padding: 50px 30px;
             display: flex;
-            flex-direction:row;
+            flex-direction: row;
             gap: 30px;
+            display: flex;
+            flex-wrap:wrap;
+            justify-content: center;
+            align-items: center;
         }
 
         .blogs .stru {
@@ -87,7 +91,7 @@
             height: 280px;
         }
 
-        .blogs .stru h3{
+        .blogs .stru h3 {
             display: flex;
             align-items: center;
             justify-content: center;
@@ -95,9 +99,12 @@
             font-size: 20px;
         }
 
-        .blogs .stru p{
+        .blogs .stru p {
             padding: 20px;
             font-size: 17px;
+            text-overflow: ellipsis;
+            height: 100px;
+            overflow: hidden;
         }
     </style>
 </head>
@@ -105,7 +112,9 @@
 <body>
     <?php
     include ('./php/nav.php');
+
     ?>
+
     <div class="container">
         <div class="banner">
             <div class="text">
@@ -116,34 +125,31 @@
                     illum, Lorem ipsum, dolor sit amet consectetur adipisicing elit. Obcaecati porro maiores
                     reprehenderit deserunt dolor tempora! </p>
             </div>
-          <a href="writeblog.php"><button>Write a blog</button></a>  
+            <a href="writeblog.php"><button>Write a blog</button></a>
         </div>
     </div>
 
     <div class="blogs">
-        <div class="stru">
-            
-            <img src="https://i.pinimg.com/736x/1c/d6/24/1cd624bea0bb899712fcbefa413ce32a.jpg" alt="">
-            <h3>Title</h3>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nisi perferendis enim saepe reiciendis
-            facere asperiores consectetur totam ducimus nobis corporis.</p>
-        </div>
 
-        <div class="stru">
-            
-            <img src="https://i.pinimg.com/736x/1c/d6/24/1cd624bea0bb899712fcbefa413ce32a.jpg" alt="">
-            <h3>Title</h3>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nisi perferendis enim saepe reiciendis
-            facere asperiores consectetur totam ducimus nobis corporis.</p>
-        </div>
+        <?php
 
-        <div class="stru">
-            
-            <img src="https://i.pinimg.com/736x/1c/d6/24/1cd624bea0bb899712fcbefa413ce32a.jpg" alt="">
-            <h3>Title</h3>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nisi perferendis enim saepe reiciendis
-            facere asperiores consectetur totam ducimus nobis corporis.</p>
-        </div>
+        include ('./php/connect.php');
+
+        $sqlQuery = "SELECT * FROM blogs";
+        $result = mysqli_query($conn, $sqlQuery);
+        while ($row = $result->fetch_assoc()) {
+            echo '
+    <div class="blogs">
+<div class="stru">
+    <img src=' . $row['image'] . ' alt="">
+    <h3>' . $row['title'] . '</h3>
+    <p>' . $row['content'] . '</p>
+</div>
+</div>
+
+    ';
+        }
+        ?>
     </div>
 
 
