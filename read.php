@@ -66,10 +66,15 @@
 </head>
 
 <body>
+    <?php
+    include ('./php/nav.php');
+    ?>
+
     <div class="container">
         <div class="content">
-            <h2 data-aos="fade-up" >What causes the Northern Lights?</h2>
-            <p data-aos="fade-up">The aurora borealis has danced across northern skies since the dawn of our planet. Dinosaurs, woolly
+            <h2 data-aos="fade-up">What causes the Northern Lights?</h2>
+            <p data-aos="fade-up">The aurora borealis has danced across northern skies since the dawn of our planet.
+                Dinosaurs, woolly
                 mammoths, and Vikings all walked beneath it, just as we do today. It is a constant of our world Lorem
                 ipsum dolor sit amet consectetur adipisicing elit. Voluptate neque delectus aspernatur sequi error eaque
                 provident officiis ratione totam quia, temporibus vero iusto commodi corporis id excepturi laborum
@@ -77,13 +82,15 @@
 
             <p data-aos="fade-up" id="diff">But what creates this awe-inspiring phenomenon?</p>
         </div>
-        <div  class="imgbv">
-            <img data-aos="fade-up" src="https://i.pinimg.com/564x/9a/45/4b/9a454b0793b53c5ba785fe03bb67ca64.jpg" alt="">
+        <div class="imgbv">
+            <img data-aos="fade-up" src="https://i.pinimg.com/564x/9a/45/4b/9a454b0793b53c5ba785fe03bb67ca64.jpg"
+                alt="">
         </div>
 
         <div class="content">
             <h2 data-aos="fade-up">The science and facts behind the Northern Lights</h2>
-            <p data-aos="fade-up">So, what are the Northern Lights? “I never get tired of answering this question as I want people to
+            <p data-aos="fade-up">So, what are the Northern Lights? “I never get tired of answering this question as I
+                want people to
                 understand just how amazing what we are seeing really is!” says irrepressibly enthusiastic Northern
                 Lights expert Dr John Mason MBE.
 
@@ -96,23 +103,27 @@
                 the edge going out into space. Those streamers feed into what we call the solar wind – a steady stream
                 of gas and electrically charged particles flowing out from the Sun all the time.”</p>
 
-            <p data-aos="fade-up">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam error, accusamus est non iusto
+            <p data-aos="fade-up">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam error, accusamus est
+                non iusto
                 voluptatum nihil. Dolor, quibusdam obcaecati ad sed at nisi maxime in, temporibus ea non dolorum
                 repellendus? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Omnis minus quidem est? Cumque
                 consectetur veniam cum aspernatur deserunt minima laborum laudantium ad, molestiae nostrum dignissimos
                 facilis totam sapiente ipsum eius!</p>
 
-            <p data-aos="fade-up">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore labore a quam blanditiis adipisci minus
+            <p data-aos="fade-up">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore labore a quam
+                blanditiis adipisci minus
                 eius corrupti. Doloribus itaque iure sed modi obcaecati illo, soluta nulla animi reprehenderit eos quod,
                 maxime deleniti? Et ipsum ipsa corporis quam iusto ratione nam cum, necessitatibus esse. Rerum ex
                 placeat non consequatur mollitia itaque veniam! Et, sapiente? Porro officia, odit neque nemo iusto,
                 beatae facilis reiciendis eaque, temporibus aspernatur nihil illum fugiat laboriosam. Ea.</p>
 
             <div class="imgbv">
-                <img data-aos="fade-up" src="https://i.pinimg.com/564x/3b/39/f1/3b39f1433421ddcfdeb1362e9566267e.jpg" alt="">
+                <img data-aos="fade-up" src="https://i.pinimg.com/564x/3b/39/f1/3b39f1433421ddcfdeb1362e9566267e.jpg"
+                    alt="">
             </div>
 
-            <p data-aos="fade-up">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore labore a quam blanditiis adipisci minus
+            <p data-aos="fade-up">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore labore a quam
+                blanditiis adipisci minus
                 eius corrupti. Doloribus itaque iure sed modi obcaecati illo, soluta nulla animi reprehenderit eos quod,
                 maxime deleniti? Et ipsum ipsa corporis quam iusto ratione nam cum, necessitatibus esse. Rerum ex
                 placeat non consequatur mollitia itaque veniam! Et, sapiente? Porro officia, odit neque nemo iusto,
@@ -122,7 +133,8 @@
 
         <div class="content">
             <h2 data-aos="fade-up">When is the best time to see the Northern Lights?</h2>
-            <p data-aos="fade-up">So, what are the Northern Lights? “I never get tired of answering this question as I want people to
+            <p data-aos="fade-up">So, what are the Northern Lights? “I never get tired of answering this question as I
+                want people to
                 understand just how amazing what we are seeing really is!” says irrepressibly enthusiastic Northern
                 Lights expert Dr John Mason MBE.
 
@@ -136,23 +148,27 @@
                 of gas and electrically charged particles flowing out from the Sun all the time.”</p>
 
             <div class="imgbv">
-                <img data-aos="fade-up" src="https://i.pinimg.com/564x/fb/54/86/fb5486b91c19788bdc54ac1c525a3d85.jpg" alt="">
+                <img data-aos="fade-up" src="https://i.pinimg.com/564x/fb/54/86/fb5486b91c19788bdc54ac1c525a3d85.jpg"
+                    alt="">
             </div>
 
-            <p data-aos="fade-up">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore labore a quam blanditiis adipisci minus
+            <p data-aos="fade-up">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore labore a quam
+                blanditiis adipisci minus
                 eius corrupti. Doloribus itaque iure sed modi obcaecati illo, soluta nulla animi reprehenderit eos quod,
                 maxime deleniti? Et ipsum ipsa corporis quam iusto ratione nam cum, necessitatibus esse. Rerum ex
                 placeat non consequatur mollitia itaque veniam! Et, sapiente? Porro officia, odit neque nemo iusto,
                 beatae facilis reiciendis eaque, temporibus aspernatur nihil illum fugiat laboriosam. Ea.</p>
 
-            <p data-aos="fade-up">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore labore a quam blanditiis adipisci minus
+            <p data-aos="fade-up">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore labore a quam
+                blanditiis adipisci minus
                 eius corrupti. Doloribus itaque iure sed modi obcaecati illo, soluta nulla animi reprehenderit eos quod,
                 maxime deleniti? Et ipsum ipsa corporis quam iusto ratione nam cum, necessitatibus esse. Rerum ex
                 placeat non consequatur mollitia itaque veniam! Et, sapiente? Porro officia, odit neque nemo iusto,
                 beatae facilis reiciendis eaque, temporibus aspernatur nihil illum fugiat laboriosam. Ea.</p>
 
 
-            <p data-aos="fade-up">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam error, accusamus est non iusto
+            <p data-aos="fade-up">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam error, accusamus est
+                non iusto
                 voluptatum nihil. Dolor, quibusdam obcaecati ad sed at nisi maxime in, temporibus ea non dolorum
                 repellendus? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Omnis minus quidem est? Cumque
                 consectetur veniam cum aspernatur deserunt minima laborum laudantium ad, molestiae nostrum dignissimos
@@ -162,7 +178,8 @@
 
         <div class="content">
             <h2 data-aos="fade-up">Why are there different colours in the Northern Lights? </h2>
-            <p data-aos="fade-up">So, what are the Northern Lights? “I never get tired of answering this question as I want people to
+            <p data-aos="fade-up">So, what are the Northern Lights? “I never get tired of answering this question as I
+                want people to
                 understand just how amazing what we are seeing really is!” says irrepressibly enthusiastic Northern
                 Lights expert Dr John Mason MBE.
 
@@ -176,23 +193,28 @@
                 of gas and electrically charged particles flowing out from the Sun all the time.”</p>
 
             <div class="imgbv">
-                <img data-aos="fade-up" src="https://global.hurtigruten.com/globalassets/photos/inspiration/northern-lights/hub/aurora-colour-altitudes.png?width=1240" alt="">
+                <img data-aos="fade-up"
+                    src="https://global.hurtigruten.com/globalassets/photos/inspiration/northern-lights/hub/aurora-colour-altitudes.png?width=1240"
+                    alt="">
             </div>
 
-            <p data-aos="fade-up">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore labore a quam blanditiis adipisci minus
+            <p data-aos="fade-up">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore labore a quam
+                blanditiis adipisci minus
                 eius corrupti. Doloribus itaque iure sed modi obcaecati illo, soluta nulla animi reprehenderit eos quod,
                 maxime deleniti? Et ipsum ipsa corporis quam iusto ratione nam cum, necessitatibus esse. Rerum ex
                 placeat non consequatur mollitia itaque veniam! Et, sapiente? Porro officia, odit neque nemo iusto,
                 beatae facilis reiciendis eaque, temporibus aspernatur nihil illum fugiat laboriosam. Ea.</p>
 
-            <p data-aos="fade-up">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore labore a quam blanditiis adipisci minus
+            <p data-aos="fade-up">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore labore a quam
+                blanditiis adipisci minus
                 eius corrupti. Doloribus itaque iure sed modi obcaecati illo, soluta nulla animi reprehenderit eos quod,
                 maxime deleniti? Et ipsum ipsa corporis quam iusto ratione nam cum, necessitatibus esse. Rerum ex
                 placeat non consequatur mollitia itaque veniam! Et, sapiente? Porro officia, odit neque nemo iusto,
                 beatae facilis reiciendis eaque, temporibus aspernatur nihil illum fugiat laboriosam. Ea.</p>
 
 
-            <p data-aos="fade-up">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam error, accusamus est non iusto
+            <p data-aos="fade-up">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam error, accusamus est
+                non iusto
                 voluptatum nihil. Dolor, quibusdam obcaecati ad sed at nisi maxime in, temporibus ea non dolorum
                 repellendus? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Omnis minus quidem est? Cumque
                 consectetur veniam cum aspernatur deserunt minima laborum laudantium ad, molestiae nostrum dignissimos

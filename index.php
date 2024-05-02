@@ -10,18 +10,9 @@
 </head>
 
 <body>
-    <header class="header">
-        <a href="#" class="logo">Aurora</a>
-
-        <nav class="navbar">
-            <a href="#home">Home</a>
-            <a href="#galleryy">Gallery</a>
-            <a href="#destinationn">Destination</a>
-            <a href="#forum">Forum</a>
-            <button><a href="./registration.html">Signup</a></button>
-        </nav>
-    </header>
-
+    <?php 
+      include('./php/nav.php');
+    ?>
     <section id="home">
         <div class="container">
             <div class="bg">
@@ -34,7 +25,7 @@
                 <h3>Lorem ipsum dolor sit amet consectetur</h3>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo, architecto doloremque facilis
                     dolorem quidem perferendis.</p>
-                <a href="./read.html"> <button>READ MORE</button></a>
+                <a href="./read.php"> <button>READ MORE</button></a>
             </div>
         </div>
     </section>
@@ -101,7 +92,7 @@
 
                     <h3>THEMES</h3>
 
-                    <a href="/gallery/themes.html"><button>VIEW MORE</button></a>
+                    <a href="themes.php"><button>VIEW MORE</button></a>
                 </div>
             </div>
 
@@ -113,7 +104,7 @@
 
                     <h3>AI IMAGES</h3>
 
-                    <a href="/gallery/ai.html"><button>VIEW MORE</button></a>
+                    <a href="ai.php"><button>VIEW MORE</button></a>
                 </div>
             </div>
         </div>
@@ -268,42 +259,36 @@
     </section>
 
 
-    <section id="forum">
+    <section id="Blog">
         <div class="newimg">
             <div class="imgs">
                 <img data-aos="fade-up" src="https://i.pinimg.com/564x/0a/6c/cb/0a6ccb18230a03e1ab4840b6aecda08c.jpg"
                     alt="">
-                <button data-aos="fade-up">Join Group</button>
+                    <a href="blog.php"><button>Add a Blog</button></a>
             </div>
 
             <div class="imgs">
                 <img data-aos="fade-up" src="https://i.pinimg.com/736x/b5/e9/05/b5e905eff4a8059d7cc7d7bb9298a1c9.jpg"
                     alt="">
-                <button data-aos="fade-up">Read Blog</button>
+                 <a href="blog.php"><button>Add a Blog</button></a>
             </div>
 
             <div class="imgs">
                 <img data-aos="fade-up" src="https://i.pinimg.com/564x/75/1f/00/751f00a5eb42c818b0964c959bd40cc4.jpg"
                     alt="">
-               <a href="./read.html"><button data-aos="fade-up">Read Article</button></a> 
+               <a href="./read.php"><button>Read Article</button></a> 
             </div>
 
         </div>
     </section>
 
     <footer >
-        <p>All rights reserverd.Use of site constitute acceptance of<span> user agreement</span>&
+        <!-- <p>All rights reserverd.Use of site constitute acceptance of<span> user agreement</span>&
             <span>privacy policy and cookies statement.</span>that are must for better experience. 
            
-        </p>
+        </p> -->
 
-        <div class="mainall">
-
-            <div class="things">
-                <h4>About us</h4>
-                <h4>Cookies Policy</h4>
-                <h4>Travels</h4>
-            </div>
+        <!-- <div class="mainall">
 
             <div class="things">
                 <h4>About us</h4>
@@ -329,7 +314,13 @@
                 <h4>Travels</h4>
             </div>
 
-        </div>
+            <div class="things">
+                <h4>About us</h4>
+                <h4>Cookies Policy</h4>
+                <h4>Travels</h4>
+            </div>
+
+        </div> -->
 
         <div class="main">
             <p>©2024</p>

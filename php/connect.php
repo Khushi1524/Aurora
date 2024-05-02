@@ -11,6 +11,6 @@ $conn = new mysqli($db_servername, $db_username, $db_password, $db_dbname, $db_p
 if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
 }
-echo "registration successful";
+
 
 ?>

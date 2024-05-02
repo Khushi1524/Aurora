@@ -1,75 +1,4 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    outline: none;
-    text-decoration: none;
-}
 
-.header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    padding: 20px 100px;
-    background: transparent;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    z-index: 100;
-}
-
-.header .logo {
-    font-size: 32px;
-    color: #fff;
-    text-decoration: none;
-    font-weight: 700;
-}
-
-.header .navbar a {
-    position: relative;
-    font-size: 18px;
-    color: #fff;
-    font-weight: 500;
-    text-decoration: none;
-    margin-left: 40px;
-}
-
-.header .navbar button {
-    padding: 10px 0px;
-    border-radius: 15px;
-    font-size: 20px;
-    color: #fff;
-    font-weight: 700px;
-    border: 2px solid rgb(151, 26, 151);
-    background: transparent;
-}
-
-.header .navbar button:hover {
-    background: rgb(91, 217, 108);
-    background: linear-gradient(90deg, rgba(91, 217, 108, 1) 32%, rgba(115, 207, 226, 1) 100%);
-    box-shadow: 0 2px 24px 0 rgb(203, 75, 207), 0 6px 16px 0 rgb(213, 75, 223);
-    
-}
-
-.header .navbar a::before {
-    content: '';
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 0;
-    height: 2px;
-    background: #fff;
-    transition: .5s;
-}
-
-.header .navbar a:hover::before {
-    width: 100%;
-}
-
-::-webkit-scrollbar {
-    display: none;
-}
 
 /* homepage */
 
@@ -360,17 +289,17 @@
     line-height: 22px;
 }
 
-/* forum */
+/* Blog*/
 
  
-#forum{
+#Blog{
     position: relative;
     min-height: 60vh;
     padding: 100px 100px;
     background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTy-2JZ3DIUsOsrvQeaCsqGlDfc5BOa3HpWXw&usqp=CAU');  
 }
 
-#forum .newimg {
+#Blog .newimg {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -378,27 +307,30 @@
     gap: 25px;
 }
 
-#forum .newimg .imgs{
+#Blog .newimg .imgs{
    position: relative;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   width: 30%;
+   aspect-ratio: 1/1;
 }
 
-
-#forum .newimg .imgs button{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%); 
-    background-color: black;
-    color: #fff; 
-    border: none; 
-    padding: 18px 30px;
-    font-size: 18px;
-    cursor: pointer;
-    border-radius: 20px;
+#Blog .newimg .imgs a{
+    z-index: 2;
 }
 
+#Blog .newimg .imgs button {
+    padding: 16px 10px;
+    width: 150px;
+    font-size: 15px;
+    color: #fff;
+    background: black;
+    border-radius: 8px;
+    margin-top: 20px;
+}
 
-#forum .newimg .imgs button:hover{
+#Blog .newimg .imgs button:hover {
     color: black;
     font-weight: 600;
     font-size: 16px;
@@ -407,14 +339,15 @@
     box-shadow: 0 2px 24px 0 rgb(203, 75, 207), 0 6px 16px 0 rgb(213, 75, 223);
 }
 
-#forum .newimg img {
-    width: 60vh;
-    height: 60vh;
+#Blog .newimg .imgs img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
     border-radius: 20%;
     opacity: 75%;
 }
 
-#forum .newimg img:hover{
+#Blog .newimg .imgs img:hover{
     box-shadow: 0 2px 24px 0 rgba(203, 75, 207, 0.229), 0 6px 16px 0 rgba(213, 75, 223, 0.234);
 } 
 
@@ -446,7 +379,7 @@ footer .mainall .things{
     display: flex;
     flex-direction: column;
     font-size: 17px;
-    color: #fff;
+    color: rgb(192, 189, 189)
 }
 
 footer .mainall .things h4{

@@ -1,24 +1,9 @@
 <?php
-   include('connect.php');
-   if (isset($_POST['submit'])) {
-     $file_name = $_FILES['image']['name'];
-     $tempname =$_FILES['image']['tmp_name'];
-     $folder = 'images/'.$file_name;
-
-
-     $query = mysqli_query($conn, "Insert into images (file) values ('$file_name')");
-
-     if (move_uploaded_file($tempname, $folder)) {
-        echo "<h2>File uploaded successfully</h2>";
-     }else {
-        echo "<h2>File not uploaded successfully</h2>";
-     }
-   }
+include ('./php/connect.php'); 
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -34,9 +19,9 @@
             outline: none;
         }
 
-        /* body {
+        body {
             background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTy-2JZ3DIUsOsrvQeaCsqGlDfc5BOa3HpWXw&usqp=CAU');
-        } */
+        }
 
         ::-webkit-scrollbar {
             display: none;
@@ -99,32 +84,40 @@
 </head>
 
 <body>
+<?php 
+      include('./php/nav.php');
+    ?>
+
     <div class="container">
         <div data-aos="fade-up" class="content">
             <h2>COUNTRIES</h2>
 
-            <form action="" method="post" enctype="multipart/form-data" >
+            <form action="upload.php" method="post" enctype="multipart/form-data">
                 <input type="file" name="image" id="">
-                <button type="submit" name="submit" >Submit</button>
+                <button type="submit" name="submit">Submit</button>
             </form>
 
-            
-        
-
         </div>
 
-        <div  class="imgs">
-            <?php 
 
-            $res = mysqli_query($conn, "select * from images");
-            while($row = mysqli_fetch_assoc($res)){
+        <div class="imgs">
+            <?php
+            $res = mysqli_query($conn, "SELECT * FROM images");
 
+            // Check if there are any rows returned
+            if (mysqli_num_rows($res) > 0) {
+                while ($row = mysqli_fetch_assoc($res)) {
+                    ?>
+                    <img src="images/<?php echo $row['file'] ?>" />
+                <?php
+                }
+            } else {
+                // Display a message if no images are uploaded
+                echo "No image uploaded.";
+            }
             ?>
-            <img src="images/<?php echo $row['file']  ?>" />
-             
-            <?php }?>
-           
         </div>
+
     </div>
 
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
