@@ -73,7 +73,7 @@
             flex-direction: row;
             gap: 30px;
             display: flex;
-            flex-wrap:wrap;
+            flex-wrap: wrap;
             justify-content: center;
             align-items: center;
         }
@@ -139,13 +139,13 @@
         $result = mysqli_query($conn, $sqlQuery);
         while ($row = $result->fetch_assoc()) {
             echo '
-    <div class="blogs">
-<div class="stru">
-    <img src=' . $row['image'] . ' alt="">
-    <h3>' . $row['title'] . '</h3>
-    <p>' . $row['content'] . '</p>
-</div>
-</div>
+                 <div class="blogs">
+                 <div class="stru">
+                   <img src=' . $row['image'] . ' alt="">
+                      <h3>' . $row['title'] . '</h3>
+                      <p>' . $row['content'] . '</p>
+                    </div>
+                </div>
 
     ';
         }

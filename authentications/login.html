@@ -1,20 +1,128 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>User Login</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            text-decoration: none;
+        }
+
+        body {
+            background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTy-2JZ3DIUsOsrvQeaCsqGlDfc5BOa3HpWXw&usqp=CAU');
+        }
+
+        .outercontainer {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .outercontainer .container {
+            display: flex;
+            flex-direction: row;
+            width: 60%;
+            height: 75vh;
+            margin-top: 80px;
+            border-radius: 30px;
+            /* background: rgb(48, 128, 223);
+            background: linear-gradient(162deg, rgba(48, 128, 223, 1) 0%, rgba(219, 58, 227, 1) 45%, rgba(19, 228, 169, 1) 100%); */
+            background: rgb(18, 108, 214);
+            background: linear-gradient(162deg, rgba(18, 108, 214, 1) 0%, rgba(143, 6, 150, 1) 45%, rgba(11, 205, 150, 1) 100%);
+        }
+
+        .outercontainer .container:hover {
+            box-shadow: 0 2px 24px 0 rgb(203, 75, 207), 0 6px 16px 0 rgb(213, 75, 223);
+        }
+
+        .outercontainer .container .imgcontainer {
+            width: 50%;
+        }
+
+        .outercontainer .container .imgcontainer img {
+            width: 100%;
+            height: 75vh;
+            border-top-left-radius: 30px;
+            border-bottom-left-radius: 30px;
+        }
+
+        .outercontainer .container .formcontainer {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .outercontainer .container .formcontainer h2 {
+            font-size: 30px;
+            padding: 20px;
+        }
+
+
+        .outercontainer .container .formcontainer input {
+            color: antiquewhite;
+            border: none;
+            border-bottom: 5px solid green;
+            width: 200px;
+            height: 35px;
+        }
+
+        .container .formcontainer .buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            padding-bottom: 30px;
+        }
+
+        .container .formcontainer .buttons button {
+            padding: 16px 10px;
+            width: 120px;
+            font-size: 15px;
+            color: #fff;
+            background: black;
+            border-radius: 8px;
+        }
+
+        .container .formcontainer .buttons button:hover {
+            color: black;
+            font-size: 16px;
+            font-weight: bold;
+            background: rgb(91, 217, 108);
+            background: linear-gradient(90deg, rgba(91, 217, 108, 1) 32%, rgba(115, 207, 226, 1) 100%);
+            box-shadow: 0 2px 24px 0 rgb(203, 75, 207), 0 6px 16px 0 rgb(213, 75, 223);
+        }
+    </style>
 </head>
+
 <body>
-    <h2>User Login</h2>
-    <form action="../php/login.php" method="post">
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" required><br><br>
-        
-        <label for="password">Password:</label>
-        <input type="password" id="password" name="password" required><br><br>
-        
-        <button type="submit">Login</button>
-    </form>
+
+    <div class="outercontainer">
+
+        <div class="container">
+            <div class="imgcontainer">
+                <img src="https://i.pinimg.com/564x/70/37/af/7037af6b2e35c7a6c22a5c0dea2f4aca.jpg" alt="">
+            </div>
+            <div class="formcontainer">
+                <h2>User Login</h2>
+                <form action="../php/login.php" method="post">
+                    <input type="text" id="name" name="name" placeholder="Username" required><br><br>
+                    <input type="password" id="password" name="password" placeholder="password" required><br><br>
+
+                    <div class="buttons">
+                        <button type="submit">Signin</button>
+                        <button type="submit">SignUp</button>
+                    </div>
+                    <h3>Do not have an account? <a href="./registration.html"> SignUp</a> </h3>
+                </form>
+            </div>
+        </div>
+    </div>
 </body>
+
 </html>

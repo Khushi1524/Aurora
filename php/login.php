@@ -20,7 +20,7 @@ if(isset($_POST['name']) && isset($_POST['password'])){
         header("Location: ../index.php");
         exit(); // Ensure no further code execution after redirection
     } else {
-        header("Location: ../login.html");
+        header('Location: ../authentications/login.html');
     }
 }
 ?>
