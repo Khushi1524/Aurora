@@ -1,9 +1,10 @@
 <?php
-include ('./php/connect.php'); 
+include ('./php/connect.php');
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -45,7 +46,6 @@ include ('./php/connect.php');
         .container .content h2 {
             font-size: 34px;
             color: #fff;
-            padding: 20px;
         }
 
         .container .content p {
@@ -80,25 +80,41 @@ include ('./php/connect.php');
             height: 60vh;
             border-radius: 20%;
         }
+
+        .container form{
+            gap:0px;
+            background: red;
+            margin-top: -100px;
+        }
+
+        .container form 
     </style>
 </head>
 
 <body>
-<?php 
-      include('./php/nav.php');
+    <?php
+    include ('./php/nav.php');
     ?>
 
     <div class="container">
         <div data-aos="fade-up" class="content">
             <h2>COUNTRIES</h2>
 
-            <form action="upload.php" method="post" enctype="multipart/form-data">
-                <input type="file" name="image" id="">
-                <button type="submit" name="submit">Submit</button>
-            </form>
+            <?php
+            session_start();
+
+            if (!isset($_SESSION['userlogin']) && !$_SESSION == true) {
+              echo ' <a href="./authentications/login.html"><button>UPLOAD SOME IMAGES</button></a> ';
+            } else {
+                echo '
+                <form action="./php/upload.php" method="post" enctype="multipart/form-data">
+                    <input type="file" name="image" id="">
+                    <button type="submit" name="submit">Submit</button>
+                </form>';
+            }
+            ?>
 
         </div>
-
 
         <div class="imgs">
             <?php
@@ -109,7 +125,7 @@ include ('./php/connect.php');
                 while ($row = mysqli_fetch_assoc($res)) {
                     ?>
                     <img src="images/<?php echo $row['file'] ?>" />
-                <?php
+                    <?php
                 }
             } else {
                 // Display a message if no images are uploaded

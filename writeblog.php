@@ -2,7 +2,7 @@
 session_start();
 
 if (!isset($_SESSION['userlogin']) && !$_SESSION == true) {
-    header('Location:login.html');
+    header('Location:./authentications/login.html');
 }
 ?>
 

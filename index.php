@@ -80,7 +80,7 @@
                 </div>
                 <div class="contentbx">
                     <h3>COUNTRIES</h3>
-                    <a href="countries.php"><button>VIEW MORE</button></a>
+                    <!-- <a href="countries.php"><button>VIEW MORE</button></a> -->
                 </div>
             </div>
 
@@ -89,10 +89,8 @@
                     <img src="https://i.pinimg.com/564x/d9/5a/8a/d95a8ababd0b98850d97e50bb38815de.jpg" alt="">
                 </div>
                 <div class="contentbx">
-
                     <h3>THEMES</h3>
-
-                    <a href="themes.php"><button>VIEW MORE</button></a>
+                    <!-- <a href="themes.php"><button>VIEW MORE</button></a>  -->
                 </div>
             </div>
 
@@ -101,13 +99,15 @@
                     <img src="https://i.pinimg.com/736x/31/48/5a/31485a718a0cde62c529e30487befdc3.jpg" alt="">
                 </div>
                 <div class="contentbx">
-
                     <h3>AI IMAGES</h3>
-
-                    <a href="ai.php"><button>VIEW MORE</button></a>
+                    <!-- <a href="ai.php"><button>VIEW MORE</button></a> -->
                 </div>
             </div>
+           
         </div>
+
+        <a href="ai.php"><button>VIEW MORE</button></a>
+        
     </section>
 
     <section id="destination">

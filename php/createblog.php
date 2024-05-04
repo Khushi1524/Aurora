@@ -8,7 +8,7 @@ if($_POST['title']&& $_POST['image'] && $_POST['content']){
     $title=$_POST['title'];
     $image=$_POST['image'];
     $content=$_POST['content'];
-    $userid=$_SESSION['id'];
+    $userid=$_SESSION['userid'];
 
     $sqlQuery = "INSERT INTO blogs(userid,title,image,content)VALUES('$userid','$title','$image','$content')";
     if(mysqli_query($conn,$sqlQuery)){
