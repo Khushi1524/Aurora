@@ -10,8 +10,8 @@
 </head>
 
 <body>
-    <?php 
-      include('./php/nav.php');
+    <?php
+    include ('./php/nav.php');
     ?>
     <section id="home">
         <div class="container">
@@ -29,32 +29,6 @@
             </div>
         </div>
     </section>
-
-    <!-- <section id="home">
-        <div class="container">
-            <div class="content">
-                <h2>User Registration</h2>
-            </div>
-            <div class="form">
-                <form action="register.php" method="post">
-                    <label for="name">Name:</label>
-                    <input type="text" id="name" name="name" required><br><br>
-
-                    <label for="password">Password:</label>
-                    <input type="password" id="password" name="password" required><br><br>
-
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" required><br><br>
-
-                    <label for="contact">Contact:</label>
-                    <input type="number" id="contact" name="contact" required><br><br>
-
-                    <button type="submit">Register</button>
-                    <p>Already have a account?<button><a href="login.html">Login</a></button></p>
-                </form>
-            </div>
-        </div>
-    </section> -->
 
     <section id="gallery">
         <div class="imgBx">
@@ -74,40 +48,32 @@
         </div>
 
         <div class="allimg">
-            <div data-aos="fade-up" class="imgbx">
-                <div class="imgs">
-                    <img src="https://i.pinimg.com/564x/c2/f3/c0/c2f3c060c0d5109ed1b35e2b93ebc736.jpg" alt="">
-                </div>
-                <div class="contentbx">
-                    <h3>COUNTRIES</h3>
-                    <!-- <a href="countries.php"><button>VIEW MORE</button></a> -->
-                </div>
-            </div>
+            <?php
+            include ('./php/connect.php');
 
-            <div data-aos="fade-up" class="imgbx">
-                <div class="imgs">
-                    <img src="https://i.pinimg.com/564x/d9/5a/8a/d95a8ababd0b98850d97e50bb38815de.jpg" alt="">
+            $sqlQuery = "SELECT * FROM images ORDER BY created_at DESC LIMIT 3";
+            $result = mysqli_query($conn, $sqlQuery);
+            while ($row = $result->fetch_assoc()) {
+                echo '
+                
+                <div data-aos="fade-up" class="imgbx">
+                    <div class="imgs">
+                        <img src="./images/' . $row['file'] . '" alt="">
+                    </div>
+                    <div class="contentbx">
+                        <h3>Uploaded at:' . $row['created_at'] . '</h3>
+                    </div>
                 </div>
-                <div class="contentbx">
-                    <h3>THEMES</h3>
-                    <!-- <a href="themes.php"><button>VIEW MORE</button></a>  -->
-                </div>
-            </div>
+                
+                ';
+            }
+            ?>
 
-            <div data-aos="fade-up" class="imgbx">
-                <div class="imgs">
-                    <img src="https://i.pinimg.com/736x/31/48/5a/31485a718a0cde62c529e30487befdc3.jpg" alt="">
-                </div>
-                <div class="contentbx">
-                    <h3>AI IMAGES</h3>
-                    <!-- <a href="ai.php"><button>VIEW MORE</button></a> -->
-                </div>
-            </div>
-           
+        </div>
+        <div class="buttons">
+            <a href="./countries.php"><button>UPLOAD YOURS</button></a>
         </div>
 
-        <a href="ai.php"><button>VIEW MORE</button></a>
-        
     </section>
 
     <section id="destination">
@@ -259,30 +225,40 @@
     </section>
 
 
-    <section id="Blog">
-        <div class="newimg">
-            <div class="imgs">
-                <img data-aos="fade-up" src="https://i.pinimg.com/564x/0a/6c/cb/0a6ccb18230a03e1ab4840b6aecda08c.jpg"
-                    alt="">
-                    <a href="blog.php"><button>Add a Blog</button></a>
-            </div>
+    <section id="blog">
+        <div data-aos="fade-up" class="content">
+            <h2>LATEST BLOGS</h2>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nisi nihil libero sint!</p>
+        </div>
 
-            <div class="imgs">
-                <img data-aos="fade-up" src="https://i.pinimg.com/736x/b5/e9/05/b5e905eff4a8059d7cc7d7bb9298a1c9.jpg"
-                    alt="">
-                 <a href="blog.php"><button>Add a Blog</button></a>
-            </div>
+        <div class="allimg">
+            <?php
+            include ('./php/connect.php');
 
-            <div class="imgs">
-                <img data-aos="fade-up" src="https://i.pinimg.com/564x/75/1f/00/751f00a5eb42c818b0964c959bd40cc4.jpg"
-                    alt="">
-               <a href="./read.php"><button>Read Article</button></a> 
-            </div>
+            $sqlQuery = "SELECT * FROM blogs ORDER BY id DESC LIMIT 3";
+            $result = mysqli_query($conn, $sqlQuery);
+            while ($row = $result->fetch_assoc()) {
+                echo '
+                
+                <div class="blogs">
+                <div class="stru" >
+                  <img src=' . $row['image'] . ' alt="">
+                     <h3>' . $row['title'] . '</h3>
+                     <p>' . $row['content'] . '</p>
+                   </div>
+               </div>
+                
+                ';
+            }
+            ?>
 
+        </div>
+        <div class="buttons">
+            <a href="./blog.php"><button>READ MORE</button></a>
         </div>
     </section>
 
-    <footer >
+    <footer>
         <!-- <p>All rights reserverd.Use of site constitute acceptance of<span> user agreement</span>&
             <span>privacy policy and cookies statement.</span>that are must for better experience. 
            

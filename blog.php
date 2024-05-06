@@ -72,15 +72,14 @@
             display: flex;
             flex-direction: row;
             gap: 30px;
-            display: flex;
             flex-wrap: wrap;
             justify-content: center;
             align-items: center;
         }
 
         .blogs .stru {
-            max-width: 350px;
-            max-height: 450px;
+            width: 350px;
+            height: 450px;
             background-color: white;
             border-radius: 20px;
             overflow: hidden;
@@ -99,11 +98,18 @@
             font-size: 20px;
         }
 
-        .blogs .stru p {
+        .blogs .stru .box {
             padding: 20px;
+        }
+
+        .blogs .stru p {
             font-size: 17px;
-            text-overflow: ellipsis;
-            height: 100px;
+        }
+
+        .line-clamp {
+            display: -webkit-box;
+            -webkit-line-clamp: 4;
+            -webkit-box-orient: vertical;
             overflow: hidden;
         }
     </style>
@@ -135,17 +141,19 @@
 
         include ('./php/connect.php');
 
-        $sqlQuery = "SELECT * FROM blogs";
+        $sqlQuery = "SELECT * FROM blogs ORDER BY id DESC";
         $result = mysqli_query($conn, $sqlQuery);
         while ($row = $result->fetch_assoc()) {
             echo '
-                 <div class="blogs">
+                
                  <div class="stru">
                    <img src=' . $row['image'] . ' alt="">
                       <h3>' . $row['title'] . '</h3>
-                      <p>' . $row['content'] . '</p>
+                      <div class="box">
+                      <p class="line-clamp">' . $row['content'] . '</p>
+                      </div>
                     </div>
-                </div>
+                
 
     ';
         }

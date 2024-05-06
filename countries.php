@@ -33,7 +33,7 @@ include ('./php/connect.php');
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            padding: 35px 100px;
+            padding: 75px 100px;
         }
 
         .container .content {
@@ -46,25 +46,24 @@ include ('./php/connect.php');
         .container .content h2 {
             font-size: 34px;
             color: #fff;
+            margin-bottom: 30px;
         }
 
-        .container .content p {
+        .container .content button,  .container .content #label {
+            padding: 16px 10px;
+            width: 150px;
             font-size: 15px;
             color: #fff;
-            margin-bottom: 20px;
-        }
-
-        .container .content button {
-            padding: 8px 10px;
-            font-size: 22px;
-            font-weight: 550;
+            background: black;
             border-radius: 8px;
-            margin-bottom: 25px;
         }
 
-        .container .content button:hover {
-            background: rgb(55, 220, 151);
-            color: #fff;
+        .container .content button:hover, .container .content #label:hover {
+            color: black;
+            font-weight: 600;
+            background: rgb(91, 217, 108);
+            background: linear-gradient(90deg, rgba(91, 217, 108, 1) 32%, rgba(115, 207, 226, 1) 100%);
+            box-shadow: 0 2px 24px 0 rgb(203, 75, 207), 0 6px 16px 0 rgb(213, 75, 223);
         }
 
         .container .imgs {
@@ -73,6 +72,7 @@ include ('./php/connect.php');
             flex-wrap: wrap;
             justify-content: center;
             gap: 30px;
+            margin-top: 40px;
         }
 
         .container .imgs img {
@@ -81,13 +81,9 @@ include ('./php/connect.php');
             border-radius: 20%;
         }
 
-        .container form{
-            gap:0px;
-            background: red;
-            margin-top: -100px;
+        form input{
+            display: none;
         }
-
-        .container form 
     </style>
 </head>
 
@@ -98,17 +94,17 @@ include ('./php/connect.php');
 
     <div class="container">
         <div data-aos="fade-up" class="content">
-            <h2>COUNTRIES</h2>
+            <h2>GALLERY</h2>
 
             <?php
-            session_start();
 
             if (!isset($_SESSION['userlogin']) && !$_SESSION == true) {
-              echo ' <a href="./authentications/login.html"><button>UPLOAD SOME IMAGES</button></a> ';
+                echo ' <a href="./authentications/login.html"><button>UPLOAD SOME IMAGES</button></a> ';
             } else {
                 echo '
                 <form action="./php/upload.php" method="post" enctype="multipart/form-data">
-                    <input type="file" name="image" id="">
+                 <label id="label" for="choosefile">Choose file</label>
+                    <input type="file" name="image" id="choosefile"/>
                     <button type="submit" name="submit">Submit</button>
                 </form>';
             }
@@ -118,7 +114,7 @@ include ('./php/connect.php');
 
         <div class="imgs">
             <?php
-            $res = mysqli_query($conn, "SELECT * FROM images");
+            $res = mysqli_query($conn, "SELECT * FROM images ORDER BY id DESC");
 
             // Check if there are any rows returned
             if (mysqli_num_rows($res) > 0) {

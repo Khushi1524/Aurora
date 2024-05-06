@@ -96,7 +96,7 @@ session_start();
             <a href="#home">Home</a>
             <a href="#galleryy">Gallery</a>
             <a href="#destinationn">Destination</a>
-            <a href="#Blog">Blog</a>
+            <a href="#blog">Blog</a>
 
             <?php
             if (isset($_SESSION['userlogin']) && $_SESSION == true) {
