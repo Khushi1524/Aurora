@@ -441,35 +441,11 @@
 
 footer {
     position: relative;
-    min-height: 40vh;
-    padding: 60px 180px;
+    min-height: 20vh;
+    padding: 0px 180px;
     background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTy-2JZ3DIUsOsrvQeaCsqGlDfc5BOa3HpWXw&usqp=CAU');
     font-size: 20px;
     color: #fff;
-}
-
-footer span {
-    text-decoration: underline;
-}
-
-footer .mainall {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    gap: 70px;
-    padding: 20px;
-}
-
-footer .mainall .things {
-    display: flex;
-    flex-direction: column;
-    font-size: 17px;
-    color: rgb(192, 189, 189)
-}
-
-footer .mainall .things h4 {
-    padding: 10px;
 }
 
 footer .main {
@@ -477,11 +453,11 @@ footer .main {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 20px;
+  
 }
 
 footer .main p {
-    padding: 15px;
+    padding: 10px;
 }
 
 footer .main h3 {

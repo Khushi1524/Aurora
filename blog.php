@@ -124,12 +124,10 @@
     <div class="container">
         <div class="banner">
             <div class="text">
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae expedita molestias esse.
-                    Aut, ex nulla? Alias dolor odit, voluptate necessitatibus illo eum labore quidem praesentium
-                    suscipit
-                    rerum odio nulla dolores nam, dignissimos maxime cum aperiam culpa? Quidem fugit hic expedita,
-                    illum, Lorem ipsum, dolor sit amet consectetur adipisicing elit. Obcaecati porro maiores
-                    reprehenderit deserunt dolor tempora! </p>
+                <p>Embark on an Adventure: Share Your Northern Lights Experience with the World. From captivating
+                    photographs to heartfelt stories, our blog section is a space where you can showcase your
+                    unforgettable moments under the aurora-filled skies. Join our community and inspire others with your
+                    unique encounters, creating a tapestry of shared wonder and awe.</p>
             </div>
             <a href="writeblog.php"><button>Write a blog</button></a>
         </div>

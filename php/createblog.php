@@ -16,5 +16,4 @@ if($_POST['title']&& $_POST['image'] && $_POST['content']){
     }
 }
 
-
 ?>
