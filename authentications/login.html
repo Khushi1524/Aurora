@@ -27,7 +27,7 @@
         .outercontainer .container {
             display: flex;
             flex-direction: row;
-            width: 60%;
+            max-width: 700px;
             height: 75vh;
             margin-top: 80px;
             border-radius: 30px;
@@ -48,11 +48,17 @@
             border-bottom-left-radius: 30px;
         }
 
+        .outercontainer .container  form{
+            width: 100%;
+            padding: 0 60px;
+        }
+
         .outercontainer .container .formcontainer {
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
+            width: 50%;
         }
 
         .outercontainer .container .formcontainer h2 {
@@ -62,11 +68,11 @@
 
 
         .outercontainer .container .formcontainer input {
-            color: antiquewhite;
             border: none;
-            border-bottom: 5px solid green;
-            width: 200px;
-            height: 35px;
+            width: 230px;
+            padding: 13px;
+            background: transparent;
+            border-bottom: 1px solid ;
         }
 
         .container .formcontainer .buttons {
@@ -74,6 +80,7 @@
             justify-content: center;
             gap: 20px;
             padding-bottom: 30px;
+            margin-top: 30px;
         }
 
         .container .formcontainer .buttons button {
@@ -93,6 +100,7 @@
             background: linear-gradient(90deg, rgba(91, 217, 108, 1) 32%, rgba(115, 207, 226, 1) 100%);
             box-shadow: 0 2px 24px 0 rgb(203, 75, 207), 0 6px 16px 0 rgb(213, 75, 223);
         }
+
     </style>
 </head>
 
@@ -111,10 +119,9 @@
                     <input type="password" id="password" name="password" placeholder="password" required><br><br>
 
                     <div class="buttons">
-                        <button type="submit">Signin</button>
-                        <button type="submit">SignUp</button>
+                        <button type="submit">Login</button>
                     </div>
-                    <h3>Do not have an account? <a href="./registration.html"> SignUp</a> </h3>
+                    <p>Do not have an account? <a href="./registration.html"> SignUp</a> <p>
                 </form>
             </div>
         </div>
