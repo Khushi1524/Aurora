@@ -404,7 +404,7 @@
 #blog .blogs .stru {
     max-width: 350px;
     max-height: 450px;
-    background-color: white;
+    background-color: rgba(199, 198, 198, 0.871);
     border-radius: 20px;
     overflow: hidden;
 }

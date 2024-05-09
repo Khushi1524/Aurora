@@ -9,7 +9,7 @@ include ('./php/connect.php');
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-    <title>Document</title>
+    <title>Gallery</title>
 
     <style>
         * {
