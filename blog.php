@@ -144,7 +144,7 @@
         while ($row = $result->fetch_assoc()) {
             echo '
                 
-                 <div class="stru">
+                 <div class="stru" onclick="goto(\'./fullblog.php?title='.$row['title'].'\')" >
                    <img src=' . $row['image'] . ' alt="">
                       <h3>' . $row['title'] . '</h3>
                       <div class="box">
@@ -157,6 +157,9 @@
         }
         ?>
     </div>
+
+
+    <script src="./script.js"></script>
 
 
 </body>

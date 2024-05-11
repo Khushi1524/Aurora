@@ -229,7 +229,7 @@
                 echo '
                 
                 <div class="blogs">
-                <div class="stru" >
+                <div class="stru" onclick="goto(\'./fullblog.php?title='.$row['title'].'\')" >
                   <img src=' . $row['image'] . ' alt="">
                      <h3>' . $row['title'] . '</h3>
                      <p>' . $row['content'] . '</p>
@@ -255,6 +255,7 @@
     </footer>
 
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="./script.js"></script>
     <script>
         AOS.init({
             duration: 2000,

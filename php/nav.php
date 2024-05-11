@@ -93,10 +93,10 @@ session_start();
         <a href="#" class="logo">Aurora</a>
 
         <nav class="navbar">
-            <a href="#home">Home</a>
-            <a href="#galleryy">Gallery</a>
-            <a href="#destinationn">Destination</a>
-            <a href="#blog">Blog</a>
+            <a href="./#home">Home</a>
+            <a href="./#galleryy">Gallery</a>
+            <a href="./#destinationn">Destination</a>
+            <a href="./#blog">Blog</a>
 
             <?php
             if (isset($_SESSION['userlogin']) && $_SESSION == true) {
