@@ -97,6 +97,7 @@ session_start();
             <a href="./#galleryy">Gallery</a>
             <a href="./#destinationn">Destination</a>
             <a href="./#blog">Blog</a>
+            <a href="./adminpanel.php">Admin</a>
 
             <?php
             if (isset($_SESSION['userlogin']) && $_SESSION == true) {

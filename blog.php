@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blogs</title>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&display=swap');
         * {
             margin: 0;
             padding: 0;
@@ -85,6 +86,10 @@
             overflow: hidden;
         }
 
+        .blogs .stru:hover {
+            cursor: pointer;
+        }
+
         .blogs .stru img {
             width: 350px;
             height: 280px;
@@ -144,7 +149,7 @@
         while ($row = $result->fetch_assoc()) {
             echo '
                 
-                 <div class="stru" onclick="goto(\'./fullblog.php?title='.$row['title'].'\')" >
+                 <div class="stru" onclick="goto(\'./fullblog.php?title=' . $row['title'] . '\')" >
                    <img src=' . $row['image'] . ' alt="">
                       <h3>' . $row['title'] . '</h3>
                       <div class="box">

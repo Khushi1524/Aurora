@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Articles</title>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&display=swap');
         * {
             margin: 0;
             padding: 0;
@@ -18,28 +19,91 @@
         }
 
         .fullblog {
-            padding: 50px 30px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            color: white;
+            padding: 80px 180px;
         }
 
-        .fullblog .structure {}
+        .fullblog .structure {
+            display: grid;
+            place-items: center;
+        }
 
-        .fullblog .structure .titlebx {}
+        .fullblog .structure .titlebx {
+            color: #fff;
+            padding: 20px;
+            font-size: 38px;
+            font-weight: bold;
+        }
 
-        .fullblog .structure .imgbx {}
+        .fullblog .structure .imgbx {
+            width: 700px;
+            height: 650px;
+            padding: 20px;
+        }
 
         .fullblog .structure .imgbx img {
-            width: 200px;
-            height: 300px;
+            width: 100%;
+            height: 100%;
+            border-radius: 20px;
+        }
+
+        .fullblog .structure .contentbx {
+            font-size: 18px;
+            letter-spacing: 0.8px;
+            word-spacing: 1.5px;
+            line-height: 27px;
+            color: #fff;
+        }
+
+
+        .blogs {
+            padding: 50px 30px;
+            display: flex;
+            flex-direction: row;
+            gap: 30px;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .blogs .stru {
+            width: 350px;
+            height: 450px;
+            background-color: white;
+            border-radius: 20px;
+            overflow: hidden;
+        }
+
+        .blogs .stru:hover {
+            cursor: pointer;
+        }
+
+        .blogs .stru img {
+            width: 350px;
+            height: 280px;
+        }
+
+        .blogs .stru h3 {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            font-size: 20px;
+        }
+
+        .blogs .stru .box {
+            padding: 20px;
+        }
+
+        .blogs .stru p {
+            font-size: 17px;
         }
     </style>
 </head>
 
 <body>
+    <?php
+    include ('./php/nav.php');
+    ?>
     <div class="fullblog">
 
         <?php
@@ -67,6 +131,12 @@
         }
         ?>
 
+    </div>
+
+
+
+    <div class="blogs">
+
         <?php
 
         $sqlQuery = "SELECT * FROM blogs WHERE title!='$title' ORDER BY id ASC limit 3";
@@ -87,10 +157,10 @@
         }
         ?>
 
-        <script src="./script.js"></script>
-
-
     </div>
+
+    <script src="./script.js"></script>
+
 </body>
 
 </html>

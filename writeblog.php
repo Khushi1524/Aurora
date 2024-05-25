@@ -16,6 +16,7 @@ if (!isset($_SESSION['userlogin']) && !$_SESSION == true) {
     <title>Document</title>
 
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&display=swap');
         * {
             margin: 0;
             padding: 0;

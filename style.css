@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&display=swap');
+
 /* homepage */
 
 #home .container {
@@ -330,42 +332,6 @@
     gap: 30px;
 }
 
-/* #blog  .allimg .imgbx {
-    width: 28%;
-    height: 60vh;
-    background: rgb(41, 40, 40);
-    border-radius: 20%;
-    display: flex;
-    flex-direction: column;
-    color: white;
-}
-
-#blog  .allimg .imgbx .imgs {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 85%;
-}
-
-#blog  .allimg .imgbx .imgs img {
-    width: 100%;
-    height: 100%;
-    border-radius: 20%;
-}
-
-#blog .allimg .contentbx {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 15%;
-}
-
-#blog  .allimg .contentbx h3 {
-    font-size: 18px;
-    margin-bottom: 15px;
-} */
-
 #blog .buttons {
     display: flex;
    justify-content: center;
@@ -380,6 +346,7 @@
     background: black;
     border-radius: 8px;
     margin-top: 50px;
+   
 }
 
 #blog .buttons button:hover {
@@ -407,6 +374,10 @@
     background-color: rgba(199, 198, 198, 0.871);
     border-radius: 20px;
     overflow: hidden;
+}
+
+#blog .blogs .stru:hover{
+    cursor: pointer;
 }
 
 #blog .blogs .stru img {
