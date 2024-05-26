@@ -120,7 +120,7 @@
         <div class="places">
             <div data-aos="fade-up" class="placecontent">
                 <h2>2. Abisko, Sweden</h2>
-                <p>Nestled in the remote wilderness of Swedish Lapland, Abisko is renowned as one of the premier
+                <p class="second" >Nestled in the remote wilderness of Swedish Lapland, Abisko is renowned as one of the premier
                     destinations worldwide for experiencing the awe-inspiring Northern Lights. Situated within the
                     Arctic Circle and shielded by surrounding mountains, Abisko boasts remarkably clear skies and
                     minimal light pollution, offering optimal conditions for witnessing the celestial dance of the
@@ -135,7 +135,7 @@
                 </p>
             </div>
 
-            <div class="placeimg">
+            <div id="second" class="placeimg">
                 <img data-aos="fade-up" src="https://www.holidify.com/blog/wp-content/uploads/2017/04/1.jpg" alt="">
             </div>
         </div>
@@ -168,9 +168,9 @@
 
 
         <div class="places">
-            <div data-aos="fade-up" class="placecontent">
+            <div data-aos="fade-up" class="placecontent" id="fourth">
                 <h2>4. Siberia, Russia</h2>
-                <p>In the vast expanse of Siberia, Russia, lies a land of untamed beauty and extraordinary celestial
+                <p class="second">In the vast expanse of Siberia, Russia, lies a land of untamed beauty and extraordinary celestial
                     phenomena. With its expansive wilderness and minimal light pollution, Siberia offers an unparalleled
                     opportunity to witness the Northern Lights in all their breathtaking glory. Travelers venturing into
                     this remote region are treated to awe-inspiring displays of vibrant colors dancing across the Arctic
@@ -184,7 +184,7 @@
                 </p>
             </div>
 
-            <div class="placeimg">
+            <div id="second" class="placeimg">
                 <img data-aos="fade-up" src="https://www.holidify.com/blog/wp-content/uploads/2017/04/5.jpg" alt="">
             </div>
         </div>
@@ -247,7 +247,6 @@
     </section>
 
     <footer>
-
         <div class="main">
             <p>©2024</p>
             <h3>"Aurora"- by khushi Tiwari</h3>

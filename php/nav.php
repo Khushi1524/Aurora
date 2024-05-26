@@ -81,10 +81,67 @@ session_start();
         width: 100%;
     }
 
+    .navbtn {
+        display: none;
+    }
+
     ::-webkit-scrollbar {
         display: none;
     }
 
+    @media (width<450px) {
+        .header {
+            padding: 12px;
+            width: 100vw;
+        }
+
+        .header .logo{
+            font-size: 18px;
+        }
+
+        .navbar {
+            position: fixed;
+            width: 100vw;
+            height: 100vh;
+            background: black;
+            top: 0;
+            left: -100vh;
+            padding: 0;
+        }
+
+        .navbar a {
+            display: block;
+            padding: 10px 10px;
+            border-bottom: 1px solid black;
+            margin-left: 0;
+        }
+
+        #navlogin,
+        #navsignup {
+            width: 100%;
+            display: block;
+
+        }
+
+        .navbtn {
+            display: block;
+            width: 30px;
+            border: none;
+            background-color: #ffffff68;
+        }
+
+        #close {
+            padding: 8px 10px;
+            width: 70px;
+            background: rgb(254, 66, 66);
+            margin-top: 20px;
+            margin-left: 60px;
+            border-radius: 10px;
+            color: #fff;
+        }
+
+
+    }
 </style>
 
 <body>
@@ -109,8 +166,28 @@ session_start();
             }
 
             ?>
+
+            <button onclick="menuclose()" id="close" class="navbtn">Close</button>
+
         </nav>
+
+        <button onclick="menuopen()" class="navbtn">≣</button>
     </header>
+
+    <script>
+
+        //navbar
+
+        function menuopen() {
+            const navmenu = document.getElementsByClassName("navbar")[0];
+            navmenu.style.left = '0';
+        }
+
+        function menuclose() {
+            const navmenu = document.getElementsByClassName("navbar")[0];
+            navmenu.style.left = "-100vw";
+        }
+    </script>
 
 </body>
 
