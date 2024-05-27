@@ -7,6 +7,7 @@
     <title>Blogs</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&display=swap');
+
         * {
             margin: 0;
             padding: 0;
@@ -27,8 +28,8 @@
         }
 
         .container .banner {
-            max-width: 80%;
-            min-height: 50vh;
+            width: 80%;
+            height: 50vh;
             background-image: url("https://i.pinimg.com/564x/c1/12/4a/c1124ae20ac3a1025ed738906708ea8f.jpg");
             background-repeat: no-repeat;
             background-size: cover;
@@ -116,6 +117,53 @@
             -webkit-line-clamp: 4;
             -webkit-box-orient: vertical;
             overflow: hidden;
+        }
+
+        @media (width<450px) {
+
+            .container {
+                padding-top: 20px;
+                padding: 25px;
+                
+            }
+
+            .container .banner {
+                width: 60vh;
+                height: 65vh;
+            }
+
+            .container .banner .text {
+                background: none;
+            }
+
+            .container .banner .text p {
+            padding: 10px;
+            font-size: 15px;
+            letter-spacing: 0.2px;
+            line-height: 20px;
+            color: white;
+        }
+
+            .blogs .stru {
+                width: 70vw;
+                height: 50vh
+            }
+
+            .blogs .stru img {
+                width: 100%;
+                height: 60%;
+            }
+
+
+            .blogs .stru h3 {
+                font-size: 17px;
+                padding: 0 20px;
+            }
+
+            .blogs .stru .box {
+                padding: 10px 20px;
+            }
+
         }
     </style>
 </head>

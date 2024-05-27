@@ -9,6 +9,7 @@
 
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&display=swap');
+
         * {
             margin: 0;
             padding: 0;
@@ -62,6 +63,35 @@
 
         .container .imgbv img {
             width: 50vw;
+        }
+
+        @media (width<450px) {
+            body {
+                padding: 70px 30px;
+            }
+
+            .container .content h2 {
+                font-size: 20px;
+                margin-left: 20px;
+            }
+
+            .container .content p {
+                font-size: 15px;
+                padding:15px 45px;
+            }
+
+            .container .content #diff {
+                font-size: 17px;
+            }
+
+            .container .imgbv{
+                width: 100vw;
+                padding: 30px;
+            }
+
+            .container .imgbv img {
+                width: 100%;
+            }
         }
     </style>
 </head>

@@ -7,6 +7,7 @@
     <title>Articles</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&display=swap');
+
         * {
             margin: 0;
             padding: 0;
@@ -96,6 +97,39 @@
 
         .blogs .stru p {
             font-size: 17px;
+        }
+
+        @media (width<450px) {
+            .fullblog {
+                padding: 40px 30px;
+            }
+
+            .fullblog .structure .titlebx {
+                font-size: 25px;
+            }
+
+            .fullblog .structure .imgbx {
+                width: 80vw;
+                height: 60vh;
+            }
+
+            .fullblog .structure .imgbx img {
+                width: 100%;
+                height: 100%;
+            }
+
+            .fullblog .structure .contentbx {
+                font-size: 14px;
+                letter-spacing: 0.6px;
+                word-spacing: 1.2px;
+                line-height: 24px;
+            }
+
+            .blogs .stru h3 {
+                font-size: 17px;
+            }
+
+
         }
     </style>
 </head>

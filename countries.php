@@ -85,6 +85,27 @@ include ('./php/connect.php');
         form input{
             display: none;
         }
+
+        @media (width<450px) {
+            .container .content h2 {
+            font-size: 25px;
+        }
+
+        .container .content button,  .container .content #label {
+            padding: 13px 10px;
+            width: 140px;
+            font-size: 11px;
+        }
+
+        .container .imgs {
+          width: 80vw;
+        }
+
+        .container .imgs img{
+            width: 100%;
+            height: 45vh;
+        }
+        }
     </style>
 </head>
 
@@ -100,7 +121,7 @@ include ('./php/connect.php');
             <?php
 
             if (!isset($_SESSION['userlogin']) && !$_SESSION == true) {
-                echo ' <a href="./authentications/login.html"><button>UPLOAD SOME IMAGES</button></a> ';
+                echo ' <a href="./authentications/login.html"><button>UPLOAD IMAGES</button></a> ';
             } else {
                 echo '
                 <form action="./php/upload.php" method="post" enctype="multipart/form-data">

@@ -17,6 +17,7 @@ if (!isset($_SESSION['userlogin']) && !$_SESSION == true) {
 
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&display=swap');
+
         * {
             margin: 0;
             padding: 0;
@@ -86,6 +87,55 @@ if (!isset($_SESSION['userlogin']) && !$_SESSION == true) {
             background: linear-gradient(90deg, rgba(91, 217, 108, 1) 32%, rgba(115, 207, 226, 1) 100%);
             box-shadow: 0 2px 24px 0 rgb(203, 75, 207), 0 6px 16px 0 rgb(213, 75, 223);
         }
+
+        @media (width<450px) {
+            body::-webkit-scrollbar {
+                display: none;
+            }
+
+            .container {
+                margin-top: -15px;
+            }
+
+            .container form {
+                width: 80vw;
+                height: 80vh;
+                display: flex;
+                flex-wrap: wrap;
+                padding: 20px;
+            }
+
+            .container form .fields {
+                padding: 0px;
+                width: 100%;
+
+            }
+
+            .container form .fields label,
+            input,
+            textarea {
+                font-size: 15px;
+                width: 100%;
+
+            }
+
+            .container form .fields textarea {
+                font-size: 17px;
+                width: 100%;
+                height: 50%;
+            }
+
+            .container form button {
+                width: 80px;
+            }
+
+            #btns {
+                margin-left: 8px;
+            }
+
+
+
+        }
     </style>
 </head>
 
@@ -109,7 +159,7 @@ if (!isset($_SESSION['userlogin']) && !$_SESSION == true) {
                 <label for="">Text Content</label>
                 <textarea type="" id="" name="content" rows="10" cols="70"></textarea><br>
             </div>
-            <div class="field">
+            <div class="field" id="btns">
                 <button type="reset">Reset</button><br>
                 <button type="submit">Submit</button>
             </div>
