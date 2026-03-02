@@ -32,3 +32,11 @@ Inspired by the beauty and mystery of the Northern Lights, the design focuses on
 Note :
 
 This project was developed as part of learning and exploring creative web development ideas.
+
+
+<img alt="image" src="https://github.com/user-attachments/assets/7f7644cc-a1f5-4665-bcc8-4ac5e70c0db6" />
+
+<img  alt="image" src="https://github.com/user-attachments/assets/c97a3aae-91f9-493f-b80a-8b12330b3e90" />
+
+
+
